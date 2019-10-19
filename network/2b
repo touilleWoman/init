@@ -1,1 +1,2 @@
-ping `ifconfig | grep "broadcast" | cut -d' ' -f6` | arp -a
+#!/bin/bash
+arp -a | sed -E 's#.*\(([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)\).*#\1#'
