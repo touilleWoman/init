@@ -1,0 +1,8 @@
+ #Quel est le fichier contenant les entrées locales DNS ?
+
+ /etc/hosts  
+
+ # Il s'agit d'un simple fichier texte qui associe des adresses IP avec des noms d'hôtes, 
+ # une ligne par adresse IP. Pour chaque hôte, une seule ligne doit être présente, avec les informations suivantes :
+ # Adresse_IP nom_hote_canonique [aliases...]
+

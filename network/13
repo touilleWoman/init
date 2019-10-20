@@ -1,0 +1,3 @@
+#Grâce a la question précédente et au reverse DNS retrouvez le nom de votre host
+
+nslookup the result of ex12
