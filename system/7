@@ -1,0 +1,2 @@
+# Déterminez le PID du service SSHD
+sudo /etc/init.d/ssh status | grep "PID" | cut -d ' ' -f 4
