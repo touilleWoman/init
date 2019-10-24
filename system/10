@@ -1,0 +1,11 @@
+# Name the command that lists the partition tables of external devices?
+# Quelle commande permet de lister les tables de partitions des disques ?
+
+lsblk
+
+
+# lsblk : lists all mass storage devices and partitions on them, including
+# mounted file systems, unmounted file systems and devices without any file system.
+
+# df : reports file system disk space usage, which means that it lists mounted
+# file systems and also file systems in RAM.

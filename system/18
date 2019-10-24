@@ -1,0 +1,4 @@
+#!/bin/bash
+# Donnez une commande qui permet d’arrêter le service ssh
+
+sudo systemctl stop ssh

@@ -1,2 +1,3 @@
-#Donnez une commande qui détermine l’état du service SSH
+# Name the command that determines the state of the SSH service.
+# Donnez une commande qui détermine l’état du service SSH
 sudo /etc/init.d/ssh status

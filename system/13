@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Name the command that find currently running processes
+top

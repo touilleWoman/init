@@ -1,2 +1,8 @@
+# Figure out the PID of the SSHD service.
 # Déterminez le PID du service SSHD
 sudo /etc/init.d/ssh status | grep "PID" | cut -d ' ' -f 4
+
+
+#PID (i.e., process identification number)  :
+#	an identification number that is automatically assigned
+#	to each process when it is created on a Unix-like operating system.

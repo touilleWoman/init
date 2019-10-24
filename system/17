@@ -1,0 +1,5 @@
+# Trouvez une commande qui, en parallèle de la session graphique, permet de se
+# connecter en ssh sur la machine
+
+ssh hostname
+???

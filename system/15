@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Find the command that kills the background command’s process
+# Trouvez une commande qui permet de tuer le processus de la commande en background
+
+kill <PID> or pkil <name>
+
+#ps then kill pid number
