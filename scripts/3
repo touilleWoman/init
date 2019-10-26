@@ -1,3 +1,41 @@
 #!/bin/bash
-echo "Hello user, type one city name to know weather"
-curl wttr.in/paris | sed '8, $d'
+
+walk_dir()
+{
+	for path in "$1"/*
+	do
+		if [ -d "$path" ]; then
+			walk_dir "$path"
+		else
+			case "$path" in
+				*.c|*.h)
+				echo "valid file found, start working..."
+				edit_file "$path"
+				;;
+			esac
+		fi
+	done
+}
+
+edit_file()
+{
+	file=$1
+ 	#delete multiples empty lines
+	sed -i '' 'N;/^\n$/D;P;D;' "$file"
+	sed -i '' 's/[ \t]+$//' "$file"
+}
+
+echo "Hello! This script will correct certain norm errors for file type *.c and *.h"
+read -p 'Enter file path or directory path:' dirpath
+#verify if the string $dirpath is empty
+if [ -z "$dirpath"  ]; then
+	echo "Empty input!"
+elif [ -d "$dirpath" ]; then
+	walk_dir "$dirpath"
+	echo "done!"
+elif [ -f "dirpath" ]; then
+	edit_file "$dirpath"
+	echo "done"
+else
+	echo "Wrong input!"
+fi
