@@ -1,5 +1,6 @@
 #!/bin/bash
 
-#Indiquez l’adresse de Broadcast
+# Identifiez et affichez les caractéristiques de l’interface Ethernet :
+# Indiquez l’adresse de Broadcast
 
 ifconfig | grep "broadcast" | cut -d' ' -f6

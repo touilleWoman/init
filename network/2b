@@ -1,2 +1,10 @@
 #!/bin/bash
-arp -a | sed -E 's#.*\(([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)\).*#\1#'
+ # Identifiez et affichez les caractéristiques de l’interface Ethernet :
+# Indiquez toutes les adresses IP qui font partie du même sous-réseau
+arp -a | sed -E 's#.*\(([0-9]+.[0-9]+.[0-9]+.[0-9]+)).*#\1#'
+
+ # \1 refers to the characters captured by the escaped parentheses
+
+ # La commande arp permet de visualiser ou modifier la table du cache arp de l'interface.
+ # Cette table peut être statique et (ou) dynamique.
+ # Elle donne la correspondance entre une adresse IP et une adresse MAC (Ethernet).

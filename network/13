@@ -1,3 +1,9 @@
 #Grâce a la question précédente et au reverse DNS retrouvez le nom de votre host
 
-nslookup the result of ex12
+nslookup 10.13.5.5 # result of ex12
+
+
+Server:         10.51.1.42
+Address:        10.51.1.42#53
+
+5.5.13.10.in-addr.arpa  name = e3r5p5.42.fr.
