@@ -1,7 +1,11 @@
 #!/bin/bash
-user=$1
-pgrep -u "$user"
-while [[ read PID ]]; do
-	sudo kill "$pid"
+
+user_pid= pgrep -U $1
+# echo "$user_pid"
+while read "$user_pid"
+do
+	kill  "$user_pid"
 done
-sudo userdel "$user"
+
+pgrep -u $USER | while read PID; do sudo kill $PID; done
+sudo userdel $USER
