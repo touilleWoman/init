@@ -3,3 +3,5 @@
 
 Graphique : input username and password when log in
 SSH : ssh <username>@<ip> then password
+
+#local host ip 127.0.0.1. saved in /etc/hosts

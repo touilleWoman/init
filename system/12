@@ -1,5 +1,6 @@
 #!/bin/bash
 
 #Figure out the exact size of each folder of /var
+# Déterminez la taille exacte de chaque dossier de /var d’une manière humainement compréhensible suivi du chemin de celui-ci.
 
-du -hs /var/*
+sudo du -hs /var/*

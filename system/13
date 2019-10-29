@@ -1,4 +1,5 @@
 #!/bin/bash
 
 # Name the command that find currently running processes
+# Trouvez une commande qui permet, en temps réel, de trouver les processus en cours d’exécution
 top

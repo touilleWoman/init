@@ -2,8 +2,8 @@
 
 getent passwd {1000..60000} | cut -d: -f1
 
-Normal users are the users created by the root or another user with sudo privileges.
-Usually, a normal user has a real login shell and a home directory.
+# Normal users are the users created by the root or another user with sudo privileges.
+# Usually, a normal user has a real login shell and a home directory.
 
 # Each user has a numeric user ID called UID. If not specified when creating a new user
 # with the useradd command, the UID will be automatically selected from the /etc/login.defs
