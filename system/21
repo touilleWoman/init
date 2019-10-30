@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Listez tout les utilisateurs réels de la machine
 getent passwd {1000..60000} | cut -d: -f1
 
 # Normal users are the users created by the root or another user with sudo privileges.
