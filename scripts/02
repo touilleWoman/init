@@ -1,0 +1,14 @@
+#!/bin/bash
+if [[ -z $1 ]]
+then
+        echo "Empty input! Please give a user name."
+else
+        user=`cat /etc/passwd | cut -d':' -f1 | grep "^$1$"`
+        if [ -n "$user" ]
+        then
+                pgrep -u $1 | while read PID; do sudo kill 9 $PID; done
+                sudo userdel $1
+        else
+                echo "user doesn't exist"
+        fi
+fi

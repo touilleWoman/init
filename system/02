@@ -1,0 +1,4 @@
+#!/bin/bash
+# What command can you use to rename your system?
+# Quelle commande permet de renommer votre système ?
+sudo hostname newname

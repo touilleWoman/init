@@ -1,0 +1,10 @@
+#!/bin/bash
+# Trouver l’IP Publique de 42.fr
+
+dig +short 42.fr
+
+
+#plenty of websites propose IP search service
+#163.172.250.13
+#163.172.250.12
+

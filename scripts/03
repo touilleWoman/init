@@ -1,0 +1,55 @@
+#!/bin/bash
+
+walk_dir()
+{
+	for path in "$1"/*
+	do
+		if [ -d "$path" ]; then
+			walk_dir "$path" "$2"
+		else
+			case "$path" in
+				*.c|*.h)
+				edit_file "$path"
+				;;
+			esac
+		fi
+	done
+}
+
+# BSD sed, this script may not work on a non-MacOs system
+edit_file()
+{
+	file=$1
+ 	#delete multiples empty lines
+ 	sed -i '' '/^$/N;/^\n$/D' "$file"
+	# delete space the end of line
+	sed -i '' 's/[ ]+$//g' "$file"
+	#delete space before ',' ';'
+	sed -i '' 's/ ,/,/g' "$file"
+	sed -i '' 's/ ;/;/g' "$file"
+
+	let "valid_file_nb++"
+}
+
+let "valid_file_nb = 0"
+if [ -z "$1"  ]; then
+	echo "Empty input! Please give a directory path or file path."
+elif [ -d "$1" ]; then
+	walk_dir "$1"
+	echo "$valid_file_nb valid file founded"
+	echo "Done!"
+elif [ -f "$1" ]; then
+	case "$1" in
+		*.c|*.h)
+		edit_file "$1"
+		echo "$valid_file_nb valid file founded"
+		echo "Done!"
+		;;
+	*) #=else of case
+		echo "This script only works with *.c or *.h file"
+		;;
+	esac
+else
+	echo "Wrong input!"
+fi
+#Any variable you declare is a global variable by default.

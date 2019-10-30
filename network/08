@@ -1,0 +1,7 @@
+#!/bin/bash
+#Trouver chez quel hébergeur est le site de Slash16
+
+whois slash16.org
+
+#Amazon.com, Inc.
+
