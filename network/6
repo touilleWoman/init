@@ -1,8 +1,0 @@
- #Récupérez le path complet du fichier dans lequel est écrit l’adresse IP du serveur DNS que vous utilisez
-
- #  /etc/resolv.conf
-
-
- # lien sympolique de :  /var/run/resolv.conf
- # resolve.conf est le fichier de configuration de la bibliothèque resolver permettant de déterminer, entre 
- # autre, quel(s) serveur(s) DNS utiliser pour résoudre un nom de domaine.

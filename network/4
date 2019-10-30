@@ -1,5 +1,0 @@
-#!/bin/bash
-
-#Identifiez la gateway par défaut dans la table de routage
-
-route -n get default | grep "gateway" | awk '{print $2}'

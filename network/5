@@ -1,5 +1,0 @@
-#!/bin/bash
-
-#Identifiez l’IP du serveur DNS qui répond sur le domaine suivant : slash16.org
-
-dig slash16.org | grep "SERVER" | cut -d' ' -f 3 | cut -d'#' -f 1
