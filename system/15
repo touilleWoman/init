@@ -4,6 +4,6 @@
 # Trouvez une commande qui permet de tuer le processus de la commande en background
 
 kill <PID>
-#or: pkil <name>
+#or: pkill <name>
 
 #ps then kill pid number

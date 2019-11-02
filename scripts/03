@@ -24,7 +24,7 @@ edit_file()
  	sed -i '' '/^$/N;/^\n$/D' "$file"
 	# delete space the end of line
 	sed -i '' 's/[ ]+$//g' "$file"
-	#delete space before ',' ';'
+	#delete single space before ',' ';'
 	sed -i '' 's/ ,/,/g' "$file"
 	sed -i '' 's/ ;/;/g' "$file"
 

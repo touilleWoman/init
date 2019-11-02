@@ -1,10 +1,10 @@
 #!/bin/bash
 # Trouver l’IP Publique de 42.fr
 
-dig +short 42.fr
+#query from an outside server, otherwise there will be a different ip
+nslookup 42.fr 8.8.8.8
 
 
-#plenty of websites propose IP search service
 #163.172.250.13
 #163.172.250.12
 
